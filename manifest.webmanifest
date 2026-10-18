@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "歴史勉強アプリ",
+  "short_name": "歴史勉強",
+  "description": "歴史・地理の問題を作成し、答えを入力して学習できるアプリ",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f3ee",
+  "theme_color": "#f5f3ee",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
