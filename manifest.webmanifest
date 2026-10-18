@@ -1,10 +1,10 @@
 {
-  "id": "./",
+  "id": "./?app=history-study-app-v3",
   "name": "歴史勉強アプリ",
   "short_name": "歴史勉強",
   "description": "歴史・地理の問題を作成し、答えを入力して学習できるアプリ",
   "lang": "ja",
-  "start_url": "./",
+  "start_url": "./?app=history-study-app-v3",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f5f3ee",
