@@ -128,6 +128,7 @@ button,input{font:inherit}button{border:0;cursor:pointer}
 <div class="mistake-header"><div>用語・人物・地名</div><div>記録回数</div></div>
 <div id="mistakeList"></div>
 <button class="add-button" onclick="addMistake()">用語・人物・地名を追加</button>
+<button class="delete-file-button" style="margin-top:12px" onclick="deleteDataFile()">このデータを削除</button>
 </section>
 </main>
 </div>
@@ -423,6 +424,16 @@ const c=document.createElement("input");c.className="text-input count-input";c.t
 });
 }
 function addMistake(){appData.dataFiles[currentDataIndex].mistakes.push({kanji:"",count:0});saveData();displayMistakes();}
+function deleteDataFile(){
+if(currentDataIndex===null||!appData.dataFiles[currentDataIndex])return;
+const name=appData.dataFiles[currentDataIndex].name;
+if(!confirm("「"+name+"」を削除しますか？\nこのデータファイルと中に登録した用語・人物・地名がすべて削除されます。\nこの操作は元に戻せません。"))return;
+appData.dataFiles.splice(currentDataIndex,1);
+saveData();
+currentDataIndex=null;
+goHome();
+alert("データを削除しました。");
+}
 function sortMistakes(){appData.dataFiles[currentDataIndex].mistakes.sort((a,b)=>b.count-a.count);saveData();displayMistakes();}
 function openQuestionChoice(index){currentQuestionIndex=index;document.getElementById("choiceModal").style.display="flex";}
 function closeModal(){document.getElementById("choiceModal").style.display="none";}

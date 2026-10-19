@@ -1,4 +1,4 @@
-const CACHE_NAME = "history-study-app-v3";
+const CACHE_NAME = "history-study-app-v4";
 const BASE_URL = self.registration.scope;
 const APP_FILES = [BASE_URL, BASE_URL + "index.html", BASE_URL + "manifest.webmanifest", BASE_URL + "icon-192.png", BASE_URL + "icon-512.png"];
 self.addEventListener("install", event => { event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES)).then(() => self.skipWaiting())); });
